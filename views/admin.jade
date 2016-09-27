@@ -1,0 +1,14 @@
+extends layout
+block content
+    script(src="/socket.io.js")
+    script(src="/javascripts/admin.js")
+    h1(id="title") Welcome to the Admin UI
+    button(class="btn", onclick='loadData()').
+        Load Data
+    button(class="btn", onclick='portal()').
+        Home Page
+    script.
+        function portal () {
+            window.location.href = '/'
+        }
+

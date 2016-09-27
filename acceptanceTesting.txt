@@ -1,0 +1,89 @@
+﻿The following tests begin with the format:
+
+Testing main menu: 
+- Following the splash intro, the main menu automatically comes up on screen
+  including each of the following: 
+  - Logo of the game's title: "Whack-a-Fire"
+  - theme music plays (after loading) 
+  - Start button 
+  - High scores button 
+  - Log off button 
+  - All buttons are aligned; each row central justified 
+
+Testing splash screen: 
+- Before the main menu is dispayed, an animated splash intro showing the development team
+  is displayed to the User 
+- Splash intro has audio component at appropriate volume level   
+
+The User clicks the Start Game button to begin the game and completes the game up to Level 5, noting each of the following: 
+- At the beginning of each level an animated introduction video to the level plays. (#33)  
+- The fires increase in number with each Level (#32)
+- The score reward increases with each Level (#32)  
+And the special circumstance which requires the User to play past Level 5: 
+- The timer decreases with each Level past 5 (#32)
+
+Testing the timer:
+The user clicks the start game button to begin the game and completes the game up to Level 5, if they can, noting the following:
+-	At the beginning of each level a timer appears in the top left hand corner. (#38)
+-	The timer decreases in time every second.  (#39)
+-	When the timer hits zero, then end game state is triggered, and a list of fires they’ve put out is shown. (#39)
+
+Testing the score keeper:
+The user clicks the start game button to begin the game and completes the game up to Level 5, if they can, noting the following:
+-	At the beginning of each level a score keeper appears in the top right hand corner, starting at zero. (#37)
+-	The score keeper increments with every fire put out. (#40)
+
+Testing the fire overlay:
+The user clicks the start game button to begin the game and completes the game up to Level 5, if they can, noting the following:
+-	At the beginning of each level an allotted amount of fires appear on the map.
+-	The user is able to click each fire, and after five clicks, the fire will be put out and disappear.
+-	Each individual fire is able to retain how many clicks it has left, so the user can go back and forth between each fire.
+
+Testing the high score popup:
+The user logs into the game and arrives at the start menu, noting the following:
+-	There is a button displayed labeled ‘High scores’ on the start menu.
+-	The button is clickable and brings up a window that displays an array of the users previous high scores.
+-	When the user closes the window, the popup disappears.
+
+Testing Credits popup:
+The user can click the 'credits' button from the main menu to display credits:
+-   Each 8-bit image of the developers should appear with their nickname underneath
+-   There should be a special recognition for the music from Miami Vice 1984
+
+Testing Endgame Table:
+When the game ends, the user should be able to see the location-name, latitude and longitude of each fire put out (if any)
+-   A table with a skyblue background should popup when the game ends
+-   The header with titles should render. (Headers: Name, latitude, longitude)
+-   Each fire clicked should show the correct name, lat and long based on the fire data obtained from BC Data
+
+Restart Game:
+When the game ends, the user should be able to restart the game
+-   A button should appear when the game ends that allows the user the restart the game
+-   When clicking the button, a new instance of the game should be created
+-   The old instance of the game should no longer be visible
+
+Facebook Sharing:
+When the game ends, the user should be able to share his score on facebook
+-   A button should appear when the game ends that allows the user to share his score on value
+-   When clicked the button, the user's score should be shared on his facebook account
+
+Testing Admin Logon:
+Anyone that wishes to use the admin page must input the correct username and password
+-   a popup saying 'incorrect login' should popup if an incorrect combination of a username and password is used
+-   The site should route to the admin page if the admin login is successful
+
+Testing Logon (Index Page):
+When the initial page is loaded, the user should be able to use Facebook to login to the game
+- a popup with Facebook login should appear
+- if the login is succesful your name should appear in place of the Facebook login
+- if the login is unsuccesful the Facebook login button should still appear
+
+Testing Logon (Game):
+When the game is loaded, the user should automatically logon to their game account with Facebook if they have one
+- a popup with an automated Facebook login should appear
+- if login is succesful the user can check and save scores and play the game
+- if the login is unsuccesful the user can't check or save their scores
+
+
+
+

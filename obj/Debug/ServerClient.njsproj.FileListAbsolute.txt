@@ -1,0 +1,2 @@
+C:\Users\Zach\Documents\UBC\Year3\CPSC\310\Tutorials\ServerClient\ServerClient\obj\Debug\ServerClient.njsprojResolveAssemblyReference.cache
+C:\Users\Zach\Documents\UBC\Year3\CPSC\310\Tutorials\ServerClient\ServerClient\bin\Microsoft.NodejsTools.WebRole.dll

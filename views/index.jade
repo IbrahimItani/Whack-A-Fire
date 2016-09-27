@@ -1,0 +1,40 @@
+﻿extends layout
+block content
+    script(src="/socket.io.js")
+    script(src="/javascripts/facebookUtil.js")
+    h1(id="title") 3.5 Co-Ops Portal
+    button#loginBtn(class="btn",onclick='FacebookUtil.prototype.indexLogin()').
+        Facebook Login
+    #response
+    button(class="btn", onclick='game()').
+        Game Page
+    script.
+        function game () {
+            window.location.href = '/game'
+        }
+    button(class="btn", onclick='admin()').
+        Admin Page
+    script.
+        function admin () {
+            var username = prompt("Username:", "");
+            var password = prompt("Password:", "");
+
+            if (username == 'admin' && password == 'admin'){
+                window.location.href = '/admin'
+            } else {
+                alert("Incorrect login!");
+            }
+
+        }
+    button(class="btn", onclick='videoTest()').
+        Video Test
+    script.
+        function videoTest () {
+            window.location.href = '/videotest'
+        }
+    button(class="btn", onclick='testSuite()').
+        Test Suite
+    script.
+        function testSuite () {
+            window.location.href = '/testsuite'
+        }

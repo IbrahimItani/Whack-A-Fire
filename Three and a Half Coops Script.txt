@@ -1,0 +1,23 @@
+Three and a Half Coops Script:
+
+*I'm just making a basic outline, since I think we all know the parts we did well enough to demo it.
+
+To Start:
+
+- Someone (whoever volunteers) introduces the app. Explains the game to Erik and so and so.
+- At the front page Irbahim can explain the facebook login.
+    - users can login to the app, we will either create a new user and persist into the db or if one exists do nothing
+    - at the game index, the user will be retrieved from the Server and instantiated in the game instance
+- At main menu, Ashley can explain the high scores popup, and Zach can explain the loading parts of the game
+- Zach should come in and explain all the server and heroku stuff and how that works with the game.
+    : once the main menu loads, the client requests the fire data to be delivered from the server
+    : the server recieves this response and accesses the required data from the hosted Mongo database emits a response to       client
+    : the client recieves the data and stores it inside of the Game class
+    : during this process, the client querying its local data ever 100ms to check if the required data has been loaded 
+      from the server yet.  Once it has, these queries are canceled and the 'Loading' button switches to 'Start Game' 
+- We can start playing the game and Ashley can jump in and explain the timer, the score keeper, and the fire overlays. 
+- Zach can also explain the game instance and general gameplay features. 
+    : the GameInstanceInterface is designed to facilitate the addition of new variations on gameplay.  
+- At the end Ibrahim can talk about score sharing.
+    - at the end of every game the score gets persisted into the DB into your user scoreArray
+    - in addition we have the option of sharing your score with your friends on your FB timeline

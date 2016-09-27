@@ -1,0 +1,29 @@
+﻿extends layout
+
+block content
+  script(src="/socket.io.js")
+  script(src="/javascripts/facebookUtil.js")
+  script(src="/javascripts/user.js")
+  script(src="/javascripts/fireData.js")
+  script(src="/javascripts/fireData.js")
+  script(src="/javascripts/latlong.js")
+  script(src="/javascripts/phaser.js") 
+  script(src="/javascripts/game.js")
+  script(src="/javascripts/fireOverlay.js")
+  script(src="/javascripts/timer.js")
+  script(src="/javascripts/scoreKeeper.js")
+  script(src="/javascripts/HighScorePopup.js")
+  script(src="/tests/WhackAFireInstanceTests.js") 
+  button(class="btn", onclick='wafiTests()').
+      Start WhackAFireInstance Tests
+  button(class="btn", onclick='wafiStageTwoTests()').
+      Stage 2 WhackAFireInstance Tests 
+  script.
+      var suite; 
+      function wafiTests () {
+          suite = new WhackAFireInstanceTestSuite();
+          suite.runTests(); 
+      }
+      function wafiStageTwoTests () {
+          suite.stageTwoTests(); 
+      }
